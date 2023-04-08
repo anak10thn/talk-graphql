@@ -1,0 +1,5 @@
+mutation{
+  createBook(title: "Judul Buku"){
+    id
+  }
+}

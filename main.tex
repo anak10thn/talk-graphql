@@ -49,13 +49,14 @@
 \begin{frame}
 \frametitle{Rest API}
 \begin{columns}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.6\textwidth}
     \begin{itemize}
         \item Satu API call untuk menampilkan list item.
         \item Beberapa API call untuk menampilkan detail masing-masing item.
+        \item Under-fetching dan Over-fetching
     \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
+\begin{column}{0.4\textwidth}  %%<--- here
     \inputminted{bash}{code/rest.text}
     dimana kompleksitasnya : \textit{O(n+1)}
 \end{column}
@@ -65,16 +66,51 @@
 \begin{frame}
 \frametitle{GraphQL}
 \begin{columns}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.6\textwidth}
     \begin{itemize}
-        \item GraphQL dapat menampilkan banyak data bahkan memanggil sebuah lambda yang dibutuhkan dalam satu query.
+        \item \textbf{Meminimalisir Under-fetching dan Over-fetching.}
+        \item \textbf{Strongly type schema}
+            \begin{itemize}
+                \item Schema dapat digunakan di client dan server.
+                \item Request dapat dengan mudah divalidasi.
+                \item Auto complete query dan mutation.
+                \item Sangat mudah di mocked.
+            \end{itemize}
     \end{itemize}
 \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
+\begin{column}{0.4\textwidth}  %%<--- here
     \inputminted{bash}{code/graphql.text}
     dimana kompleksitasnya : \textit{O(1)}
 \end{column}
 \end{columns}
+\end{frame}
+
+
+\section{GraphQL Operation}
+
+\begin{frame}
+\frametitle{Operation}
+\underline{Queries}
+
+\scriptsize\textit{Read data}
+\inputminted{bash}{code/query.text}
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation}
+\underline{Mutations}
+
+\scriptsize\textit{Write data}
+\inputminted{bash}{code/mutation.text}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Operation}
+\underline{Subscriptions}
+
+\scriptsize\textit{Listen for data}
+\inputminted{bash}{code/subscribe.text}
 \end{frame}
 
 \end{document}

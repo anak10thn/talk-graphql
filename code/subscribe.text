@@ -1,0 +1,7 @@
+subscription{
+  onCreateBook{
+    id
+    title
+    author
+  }
+}

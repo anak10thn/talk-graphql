@@ -1,0 +1,6 @@
+query{
+  search(q: "name"){
+    title
+    author
+  }
+}
