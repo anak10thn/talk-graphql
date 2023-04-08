@@ -1,0 +1,8 @@
+POST /graphql
+{
+    catalogs(last: 10) {
+        imgUrl(width:500)
+        name
+        likes
+    }
+}

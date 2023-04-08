@@ -45,14 +45,34 @@
 \end{frame}
 
 \section{Kenapa GraphQL?}
+
 \begin{frame}
-\frametitle{Test}
+\frametitle{Rest API}
 \begin{columns}
 \begin{column}{0.5\textwidth}
-   some text here some text here some text here some text here some text here
+    \begin{itemize}
+        \item Satu API call untuk menampilkan list item.
+        \item Beberapa API call untuk menampilkan detail masing-masing item.
+    \end{itemize}
 \end{column}
 \begin{column}{0.5\textwidth}  %%<--- here
-    sdfdsfs
+    \inputminted{bash}{code/rest.text}
+    dimana kompleksitasnya : \textit{O(n+1)}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{GraphQL}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+    \begin{itemize}
+        \item GraphQL dapat menampilkan banyak data bahkan memanggil sebuah lambda yang dibutuhkan dalam satu query.
+    \end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    \inputminted{bash}{code/graphql.text}
+    dimana kompleksitasnya : \textit{O(1)}
 \end{column}
 \end{columns}
 \end{frame}

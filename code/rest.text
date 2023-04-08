@@ -1,0 +1,3 @@
+GET /items
+GET /items/123
+GET /items/456
