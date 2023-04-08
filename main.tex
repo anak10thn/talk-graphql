@@ -1,0 +1,60 @@
+\documentclass[12pt,xcolor=table]{beamer}
+\input{preamble}
+\graphicspath{ {./images/} }
+
+\title{Introduction to Graphql}
+\subtitle{\url{https://github.com/anak10thn}}
+\date{8 April 2023}
+
+\usecolortheme[named=teal]{structure}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+\frametitle{Overview}
+\tableofcontents
+\end{frame}
+
+\section{Apa itu GraphQL}
+
+\begin{frame}
+\begin{itemize}
+    \item Dibuat oleh facebook pada 2012 dan diopen sourcekan pada 2015.
+    \item Declarative Query language yang memungkinan client melakukan request data yang diinginkan dari server.
+    \item Backend for Frontend (BFF) pattern.
+    \item Struktur data non-linier yang memiliki nodes \& edges.
+\end{itemize}
+\end{frame}
+
+\section{Persepsi keliru tentang GraphQL}
+
+\begin{frame}
+\begin{itemize}
+    \item \textbf{GraphQL sebagai pengganti RestAPI.} \textit{Kenyataannya GraphQL menggunakan RestAPI untuk mengirim Query request keserver.}
+    \item \textbf{GraphQL adalah bahasa untuk query database.} \textit{Kenyataannya GraphQL tidak bisa melakukan query ke database.}
+    \item \textbf{GraphQL adalah sebuah teknologi.} \textit{GraphQL bukan sebuah teknologi tapi sebuah pattern.}
+\end{itemize}
+\end{frame}
+
+\section{Siapa yang menggunakan?}
+\begin{frame}
+\includegraphics[scale=0.3]{images/who-use-it.png}
+\url{https://graphql.org/users}
+\end{frame}
+
+\section{Kenapa GraphQL?}
+\begin{frame}
+\frametitle{Test}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+   some text here some text here some text here some text here some text here
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+    sdfdsfs
+\end{column}
+\end{columns}
+\end{frame}
+
+\end{document}

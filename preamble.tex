@@ -1,0 +1,29 @@
+% Russian
+\usepackage[english]{babel}
+\usepackage{fontspec}
+
+% Use font with cyrillic characters
+\setmainfont{Open Sans}
+\setsansfont{Open Sans}
+\setmonofont{Inconsolata}
+
+% Various packages
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{svg}
+\usepackage{multirow}
+\usepackage{xparse}
+\usepackage{listings}
+
+% Include TOC before each frame
+\AtBeginSection[]{\begin{frame}<beamer>\frametitle{}\tableofcontents[currentsection,hideothersubsections]\end{frame}}
+
+% Minted package for code listings
+\usepackage{minted}
+\setminted[bash]{
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.2,
+    fontsize=\footnotesize,
+    linenos
+}
