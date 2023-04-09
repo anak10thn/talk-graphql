@@ -1,8 +1,9 @@
 \documentclass[12pt,xcolor=table]{beamer}
 \input{preamble}
 \graphicspath{ {./images/} }
+\usepackage{hyperref}
 
-\title{Introduction to Graphql}
+\title{Introduction to GraphQL}
 \subtitle{\url{https://github.com/anak10thn}}
 \date{8 April 2023}
 
@@ -34,7 +35,7 @@
 \begin{itemize}
     \item \textbf{GraphQL sebagai pengganti RestAPI.} \textit{Kenyataannya GraphQL menggunakan RestAPI untuk mengirim Query request keserver.}
     \item \textbf{GraphQL adalah bahasa untuk query database.} \textit{Kenyataannya GraphQL tidak bisa melakukan query ke database.}
-    \item \textbf{GraphQL adalah sebuah teknologi.} \textit{GraphQL bukan sebuah teknologi tapi sebuah pattern.}
+    \item \textbf{GraphQL adalah sebuah teknologi.} \textit{GraphQL bukan sebuah teknologi melainkan sebuah pattern.}
 \end{itemize}
 \end{frame}
 
@@ -58,7 +59,7 @@
 \end{column}
 \begin{column}{0.4\textwidth}  %%<--- here
     \inputminted{bash}{code/rest.text}
-    dimana kompleksitasnya : \textit{O(n+1)}
+    \textit{O(n+1)}
 \end{column}
 \end{columns}
 \end{frame}
@@ -80,7 +81,7 @@
 \end{column}
 \begin{column}{0.4\textwidth}  %%<--- here
     \inputminted{bash}{code/graphql.text}
-    dimana kompleksitasnya : \textit{O(1)}
+    \textit{O(1)}
 \end{column}
 \end{columns}
 \end{frame}
@@ -89,7 +90,6 @@
 \section{GraphQL Operation}
 
 \begin{frame}
-\frametitle{Operation}
 \underline{Queries}
 
 \scriptsize\textit{Read data}
@@ -97,7 +97,7 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Operation}
+
 \underline{Mutations}
 
 \scriptsize\textit{Write data}
@@ -106,11 +106,83 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Operation}
 \underline{Subscriptions}
 
 \scriptsize\textit{Listen for data}
 \inputminted{bash}{code/subscribe.text}
 \end{frame}
+
+\section{Schema Definition Language (SDL) Type}
+
+\begin{frame}
+\frametitle{Object Types}
+\inputminted{bash}{code/object.text}
+\end{frame}
+
+\begin{frame}
+\frametitle{Scalars}
+\begin{itemize}
+    \item String
+    \item Float
+    \item Int
+    \item Boolean
+    \item ID
+    \item Custome scalars e.g. Date, Email
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Enum}
+\inputminted{bash}{code/enum.text}
+\end{frame}
+
+\begin{frame}
+\frametitle{Enum}
+\inputminted{bash}{code/objectenum.text}
+\end{frame}
+
+\begin{frame}
+\frametitle{Type Modifier}
+\begin{itemize}\small
+    \item \text{String: nullable string.}
+    \item \text{String!: Non-nullable string.}
+    \item \text{[String]: Nullable list of nullable string values.}
+    \item \text{[String!]: Nullable list of non-nullable string values.}
+    \item \text{[String!]!: Non-nullable list of non-nullable string values.}
+\end{itemize}
+\end{frame}
+
+\section{Tools & Library}
+
+\begin{frame}
+\frametitle{Library}
+\begin{itemize}\small
+    \item \href{https://github.com/async-graphql/async-graphql}{Async GraphQL} (Rust)
+    \item \href{http://graphene-python.org/}{Graphene} (Python)
+    \item \href{https://github.com/graphql-java/graphql-java}{GraphQL Java} (Java/Kotlin)
+    \item \href{https://github.com/graphql-go/graphql}{GraphQL Go} (Go)
+    \item \href{https://graphql.org/graphql-js/}{GraphQL.js} (javascript)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Playground}
+\begin{itemize}\small
+    \item \href{https://altairgraphql.dev/}{Altair GraphQL}
+    \item \href{https://www.graphqlbin.com/v2/new}{GraphQL Bin}
+    \item \href{https://github.com/graphql/graphql-playground}{GraphQL IDE}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Framework \& Gateway}
+\begin{itemize}\small
+    \item \href{https://typegraphql.com/}{Type GraphQL}
+    \item \href{https://github.com/graphteon/remora}{Remora}
+    \item \href{https://github.com/graphteon/shark}{Shark}
+\end{itemize}
+\end{frame}
+
+\section{Demo}
 
 \end{document}

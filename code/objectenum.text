@@ -1,0 +1,15 @@
+enum Priority {
+  LOW
+  HIGH
+}
+
+type Todo {
+  id: ID!
+  name: String!
+  description: String
+  priority: Priority!
+}
+
+type Mutation {
+  addTodo(name: String!, priority: Priority = LOW): Todo!
+}
